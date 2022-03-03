@@ -1,8 +1,7 @@
 variable "resource_group_name" {
   description = "Name of the resource group in which the resources will be created"
-  # added resource group name geenrated from acg sandbox
-  # will need to change every time since acg sanbox shutdown after 4 hours
-  default = "1-e06e5a6d-playground-sandbox"
+  # need to add resource group name generated from acg sandbox
+  default = ""
 }
 
 variable "location" {
@@ -30,6 +29,6 @@ variable "admin_user" {
 
 variable "admin_password" {
   description = "Default password for admin account"
-  # added this so will not be prompted for password
+  # added the line below so will not be prompted for password
   default = "Qwerty123!"
 }

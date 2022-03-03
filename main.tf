@@ -1,9 +1,3 @@
-/*
-modified the code from
-https://docs.microsoft.com/en-us/azure/developer/terraform/create-vm-scaleset-network-disks-hcl
-so it can be deployed to the sandbox from acloudguru
-*/
-
 terraform {
   required_version = ">=0.12"
 
@@ -18,7 +12,6 @@ terraform {
 provider "azurerm" {
   features {}
   # added skip_provider_registration
-  # i belive it is due to the constraint from acg so need to skip those resources we do not have access to
   skip_provider_registration = true
 }
 
