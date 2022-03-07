@@ -12,16 +12,16 @@ variables.tf
 2. add `"default = <password>"` under `variable "admin_password"` so there will be no more prompt, make sure the password fits the password requirements
 
 main.tf
-1. add `"skip_provider_registration = true"` under `provider "azurezm"`
+1. add `skip_provider_registration = true` under `provider "azurezm"`
 2. comment out `resource "azurerm_resource_group" "vmss"` block
-3. replace all `"resource_group_name = azurerm_resource_group.vmss.name"` with `"resource_group_name = var.resource_group_name"`
+3. replace all `resource_group_name = azurerm_resource_group.vmss.name` with `resource_group_name = var.resource_group_name`
 
 steps to run the code
 1. start acg sandbox
-2. in terminal, run `"az login -u <username from acg sandbox>"`
-3. in terminal, run `"terraform init"`
-4. in terminal, run `"terraform plan"`
-5. in terminal, run `"terraform apply"`
+2. in terminal, run `az login -u <username from acg sandbox>`
+3. in terminal, run `terraform init`
+4. in terminal, run `terraform plan`
+5. in terminal, run `terraform apply`
 
 ---
 
